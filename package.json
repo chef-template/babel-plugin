@@ -1,0 +1,41 @@
+{
+  "name": "babel-plugin",
+  "version": "0.0.1",
+  "description": "babel plugin dev for chef",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "babel --presets es2015-loose,stage-1 --plugins transform-runtime src/ --out-dir lib/",
+    "watch": "npm run build -- -watch",
+    "test": "babel --presets es2015-loose,stage-1 --plugins transform-runtime test/ --out-dir test-app/ && mocha test-app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chef-template/babel-plugin.git"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "template"
+  ],
+  "author": "321jiangtao@gmail.com",
+  "devDependencies": {
+    "babel-cli": "6.x.x",
+    "babel-core": "6.x.x",
+    "babel-plugin-transform-runtime": "6.x.x",
+    "babel-preset-es2015-loose": "6.x.x",
+    "babel-preset-stage-1": "6.x.x",
+    "babel-runtime": "6.x.x",
+    "babel-types": "6.x.x",
+    "istanbul": "^0.4.5",
+    "jasmine-node": "^1.14.5"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chef-template/babel-plugin/issues"
+  },
+  "homepage": "https://github.com/chef-template/babel-plugin#readme"
+}
