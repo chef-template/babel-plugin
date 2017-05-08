@@ -10,7 +10,9 @@
   "scripts": {
     "build": "babel --presets es2015-loose,stage-1 --plugins transform-runtime src/ --out-dir lib/",
     "watch": "npm run build -- -watch",
-    "test": "babel --presets es2015-loose,stage-1 --plugins transform-runtime test/ --out-dir test-app/ && mocha test-app/"
+    "test": "babel --presets es2015-loose,stage-1 --plugins transform-runtime test/ --out-dir test-app/ && mocha test-app/",
+    "tag": "node .tag add $1",
+    "tag:delete": "git tag -d $1 && git push origin --delete tag $1"
   },
   "repository": {
     "type": "git",
